@@ -1,12 +1,11 @@
 import './App.css';
-import Checkbox from "./UI/Checkbox/Checkbox";
+import Routing from "./Routing";
 
 function App() {
 
   return (
     <div className="App">
-        <h3>Hello World</h3>
-        <Checkbox type="checkbox" name="changeText" labelText="Check box"/>
+        <Routing/>
     </div>
   );
 }
