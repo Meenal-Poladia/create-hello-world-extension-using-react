@@ -18,12 +18,16 @@
     "128": "logo192.png"
   },
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "optional_permissions": [
     "<all_urls>"
   ],
-  "chrome_url_overrides": {
-    "newtab": "index.html"
-  }
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["./static/js/content.js"],
+    "all_frames": false,
+    "run_at": "document_end"
+  }]
 }

@@ -1,23 +1,12 @@
 import './App.css';
+import Checkbox from "./UI/Checkbox/Checkbox";
 
 function App() {
-    const handleSubmit = (e) => {
-        console.log(e.target.checked)
-    }
 
   return (
     <div className="App">
         <h3>Hello World</h3>
-        <form onSubmit={(e) => handleSubmit(e)}>
-            <input
-                type="checkbox"
-                name="changeText"
-                id="changeText"
-                onClick={(e) => handleSubmit(e)}
-            />
-            <label htmlFor="changeText">Check box</label>
-        </form>
-
+        <Checkbox type="checkbox" name="changeText" labelText="Check box"/>
     </div>
   );
 }
